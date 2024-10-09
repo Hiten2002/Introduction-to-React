@@ -72,9 +72,9 @@ export const CORE_CONCEPTS = [
         title: "Componets",
         description: "this is the Thied Demo."
     },
-    {
-        image: stateimage,
-        title: "Componets",
-        description: "this is the Forth Demo."
-    }
+    // {
+    //     image: stateimage,
+    //     title: "Componets",
+    //     description: "this is the Forth Demo."
+    // }
 ]

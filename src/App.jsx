@@ -19,25 +19,46 @@ function App() {
         <section id="core-concepts">
           <h2>Time to get started!</h2>
           <ul>
-            <CoreConcept
+            {CORE_CONCEPTS.map((coreitems) => (
+              <CoreConcept key={coreitems.title} {...coreitems} />
+            ))}
+            {/* <CoreConcept
               title={CORE_CONCEPTS[0].title}
               description={CORE_CONCEPTS[0].description}
               image={CORE_CONCEPTS[0].image}
             />
             <CoreConcept {...CORE_CONCEPTS[1]} />
             <CoreConcept {...CORE_CONCEPTS[2]} />
-            <CoreConcept {...CORE_CONCEPTS[3]} />
+            <CoreConcept {...CORE_CONCEPTS[3]} /> */}
           </ul>
         </section>
         <section id="examples">
           <h2>Examples</h2>
           <menu>
-            <TabButton onchange={() => hendelchange("Componets")}>
+            <TabButton
+              isSelected={selectedButtonTopic == "Componets"}
+              onchange={() => hendelchange("Componets")}
+            >
               Componets
             </TabButton>
-            <TabButton onchange={() => hendelchange("Jax")}>Jax</TabButton>
-            <TabButton onchange={() => hendelchange("Props")}>Props</TabButton>
-            <TabButton onchange={() => hendelchange("State")}>State</TabButton>
+            <TabButton
+              isSelected={selectedButtonTopic == "Jax"}
+              onchange={() => hendelchange("Jax")}
+            >
+              Jax
+            </TabButton>
+            <TabButton
+              isSelected={selectedButtonTopic == "Props"}
+              onchange={() => hendelchange("Props")}
+            >
+              Props
+            </TabButton>
+            <TabButton
+              isSelected={selectedButtonTopic == "State"}
+              onchange={() => hendelchange("State")}
+            >
+              State
+            </TabButton>
           </menu>
           {!selectedButtonTopic ? (
             <p>Plese select a Topic </p>
