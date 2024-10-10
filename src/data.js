@@ -13,7 +13,7 @@ export const EXAMPLES = {
           return <h1>Hello, World!</h1>;
         }`,
     },
-    Jax: {
+    Jsx: {
         title: 'JSX',
         description:
             'JSX is a syntax extension to JavaScript. It is similar to a template language, but it has full power of JavaScript (e.g., it may output dynamic content).',
@@ -69,12 +69,12 @@ export const CORE_CONCEPTS = [
     },
     {
         image: jsxUiimage,
-        title: "Componets",
+        title: "Jsx",
         description: "this is the Thied Demo."
     },
     {
         image: stateimage,
-        title: "Componets",
+        title: "State",
         description: "this is the Forth Demo."
     }
 ]
